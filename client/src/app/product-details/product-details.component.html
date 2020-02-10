@@ -5,4 +5,8 @@
 <div *ngIf="!loading">
     <h2>Détails du produit : {{ product.name }}</h2>
     
+    <ul>
+        <li>Prix: {{ product.price }}</li>
+        <li *ngIf="product.description">Description: {{ product.description }}</li>
+    </ul>
 </div>

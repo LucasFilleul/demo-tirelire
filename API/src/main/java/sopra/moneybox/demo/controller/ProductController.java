@@ -5,8 +5,6 @@ import org.springframework.web.bind.annotation.*;
 import sopra.moneybox.demo.model.Product;
 import sopra.moneybox.demo.service.ProductService;
 
-import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -18,8 +16,13 @@ public class ProductController {
     private ProductService productService;
 
     @PostMapping("/products")
-    public void createProduct(@RequestParam String name, @RequestParam int price) {
-        productService.createProduct(new Product(name, price));
+    public void createProduct(@RequestBody Product product) {
+        // Vérification des paramètres
+        if (product.getPrice() <= 0 || product.getName().length() < 3) {
+            throw new InvalidParameter("Product's name or price is not valid");
+        }
+
+        productService.createProduct(product);
     }
 
     @GetMapping("/products")
