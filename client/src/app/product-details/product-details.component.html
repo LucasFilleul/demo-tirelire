@@ -1,0 +1,8 @@
+<div *ngIf="loading">
+    Chargement
+</div>
+<!-- On affiche les donnes que quand on les a recu pour eviter les erreurs "undefined ..." -->
+<div *ngIf="!loading">
+    <h2>Détails du produit : {{ product.name }}</h2>
+    
+</div>
