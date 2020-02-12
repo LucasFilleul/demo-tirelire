@@ -34,5 +34,10 @@ public class ProductController {
     public Product getProduct(@PathVariable(value="productId") long id) {
         return productService.getProductById(id);
     }
+
+    @PutMapping("/products/{productId}/break")
+    public void breakProduct(@PathVariable(value="productId") long id) {
+        System.out.println("Exemple de chemin un peu plus complique");
+    }
 }
 

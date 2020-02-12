@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-import { AddProductFormComponent } from './add-product-form/add-product-form.component';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 @NgModule({
 	declarations: [
@@ -16,7 +16,7 @@ import { AddProductFormComponent } from './add-product-form/add-product-form.com
 		TopBarComponent,
 		ProductListComponent,
 		ProductDetailsComponent,
-		AddProductFormComponent
+		ProductFormComponent
 	],
 	imports: [
 		BrowserModule,
