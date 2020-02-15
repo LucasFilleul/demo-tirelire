@@ -11,7 +11,7 @@ import { Product } from '../product'
 })
 export class ProductFormComponent implements OnInit {
   createProductForm; // Ce nom doit correspondre au nom du formulaire 
-  submitted;
+  submitted; // Pour afficher les messages d'erreur quand on essaye d'envoyer le formulaire
 
   constructor(
     private formBuilder: FormBuilder,
@@ -40,6 +40,7 @@ export class ProductFormComponent implements OnInit {
   get price() { return this.createProductForm.get('price'); }
   get description() { return this.createProductForm.get('description'); }
 
+  // Evenement appele au clic sur le bouton de submit
   onSubmit(formValues: Product) {
     this.submitted = true;
     console.log(this.createProductForm.get('name'));

@@ -1,5 +1,12 @@
-<app-top-bar></app-top-bar>
+<!-- 
+	Le composant top-bar retourne un evenement menuNotifier quand on clique sur le btn hamburger
+	On intercepte cet event et le redirige vers la fonciton onMenyNotify du composant courant (ici app)
+-->
+<app-top-bar (menuNotifier)="onMenuNotify()"></app-top-bar>
 
-<div class="container">
-  <router-outlet></router-outlet>
+<app-menu [ngClass]="{'visible': menuVisible}"></app-menu>
+<div class="menu-background" [ngClass]="{'visible': menuVisible}" (click)="toogleMenu()"></div>
+
+<div class="container" [ngClass]="{'blur': menuVisible}">
+	<router-outlet></router-outlet>
 </div>

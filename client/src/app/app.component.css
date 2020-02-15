@@ -1,0 +1,17 @@
+.menu-background {
+    position: absolute;
+    top: 68px;
+    left: 300px;
+    right: 0px;
+    bottom: 0px;
+
+    z-index: 9;
+    cursor: pointer;
+
+    visibility: hidden;
+}
+
+.menu-background.visible {
+    visibility: visible;
+}
+

@@ -9,6 +9,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
 	declarations: [
@@ -16,7 +17,8 @@ import { ProductFormComponent } from './product-form/product-form.component';
 		TopBarComponent,
 		ProductListComponent,
 		ProductDetailsComponent,
-		ProductFormComponent
+		ProductFormComponent,
+		MenuComponent
 	],
 	imports: [
 		BrowserModule,

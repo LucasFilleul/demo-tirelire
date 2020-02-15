@@ -1,12 +1,15 @@
 <div>
     <h2>Créer un produit</h2>
+    <!-- Lien avec le composant via [formGroup] et evenement lorsqu'on submit -->
     <form [formGroup]="createProductForm" (ngSubmit)="onSubmit(createProductForm.value)">
         
         <div>
             <label for="name">
                 Name
             </label>
+            <!-- formControlName doit correspondre au nom dans la creation du formulaire dans le composant-->
             <input id="name" type="text" formControlName="name" placeholder="">
+            <!-- Affichage des erreurs de validations si besoin -->
             <div *ngIf="name.invalid && (submitted || name.dirty || name.touched)" class="alert alert-danger">
                 <div *ngIf="name.errors.required">
                     Name is required.

@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sopra-demo';
+  menuVisible = false;
+
+
+  onMenuNotify() {
+    this.toogleMenu();
+  }
+
+  toogleMenu() {
+    this.menuVisible = !this.menuVisible;
+  }
 }
