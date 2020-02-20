@@ -11,6 +11,8 @@
     z-index: 10;
 
     background-color: blue;
+
+    transition-duration: 0.5s;
 }
 
 :host.visible {
